@@ -1,0 +1,16 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    # 开启confirms模式
+    publisher-confirms: true
+    listener:
+      simple:
+        # 设置ACK消费者确认机制为手动确认
+        acknowledge-mode: manual
+        # 设置消费端每次能处理的队列数量(限流)
+        prefetch: 2
+server:
+  port: 8080

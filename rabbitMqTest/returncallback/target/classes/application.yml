@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    # 开启confirms回调模式
+    publisher-confirms: true
+    # 开启returns回调模式
+    publisher-returns: true
+server:
+  port: 8081
